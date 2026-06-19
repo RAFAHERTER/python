@@ -1,7 +1,21 @@
 num= int(input('Digite um número: '))
-print('A tabuada de {} de 1 a 10 é: \n'
-      '{}\n{}\n{}\n{}\n{}\n{}\n{}\n'
-      '{}\n{}\n{}'
-                .format(num, num*1, num*2, num*3,
-                  num*4, num*5, num*6, num*7,
-                  num*8, num*9, num*10))
+num1= num*1
+num2= num*2
+num3= num*3
+num4= num*4
+num5= num*5
+num6= num*6
+num7= num*7
+num8= num*8
+num9= num*9
+num10= num*10
+print('{} X 1 = {}'.format(num, num1))
+print('{} X 2 = {}'.format(num, num2))
+print('{} X 3 = {}'.format(num, num3))
+print('{} X 4 = {}'.format(num, num4))
+print('{} X 5 = {}'.format(num, num5))
+print('{} X 6 = {}'.format(num, num6))
+print('{} X 7 = {}'.format(num, num7))
+print('{} X 8 = {}'.format(num, num8))
+print('{} X 9 = {}'.format(num, num9))
+print('{} X 10 = {}'.format(num, num10))
