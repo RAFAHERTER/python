@@ -25,3 +25,12 @@
 #factorial
 #Entre várias outras funcionalidades.
 
+#Para ver qual são as bibliotecas disponíveis para
+#serem acessadas, acesse o seguinte site:
+#https://www.python.org/ - documentatin, python docs -
+#library reference, E lá você terá várias funcionalidades
+#dentro do pyhton.
+
+import random
+num= random.randint(0, 10)
+print(num)
