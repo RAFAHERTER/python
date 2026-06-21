@@ -1,2 +1,3 @@
 import emoji
-print(emoji.emojize('Olá, mundo: sunglasses:'))
+print(emoji.emojize('Olá, mundo :earth_americas:'
+                    , language='alias'))
