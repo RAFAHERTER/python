@@ -33,7 +33,7 @@ print(frase.count('o',0,14)) #Serve para contar a quantidade de letras 'o'(minú
 
 print(frase.find('deo')) #(Eu encontrei'deo' na posição '11') Irá me mostrar onde começou o 'deo' que foi a partir do caractere 11.
 
-print(frase.find('Android'))#Quando receber uma posição -1, significa que string 'Android' não existe dentro de 'frase'.
+print(frase.find('Android'))#Quando receber uma posição -1, significa que string não existe dentro de 'frase'.
 
 print('Curso' in frase) #Ele mostra se existe ou não 'Curso', dentro de 'frase' com 'true' ou 'false'
 
@@ -55,7 +55,8 @@ print(learn.lstrip()) #Remove apenas os espaços inúteis da esquerda
 #------- DIVISÃO DE STRING -------
 
 print(frase.split()) #Vai fazer uma divisão entre os espaços que existe dentro da string e separá-los.
-#O 'split' vai divir uma string em uma lista, onde cada palavra será separado através do espaço
+#O 'split' vai divir uma string em uma lista, onde cada palavra será separado através do espaço. Além disso a palavra
+#será identificada como um caracter.
 
 #------- JUNÇÃO DE STRING -------
 
