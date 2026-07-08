@@ -1,16 +1,18 @@
-print('====== DESAFIO 033 ======')
+a = int(input('Primeiro valor: '))
+b = int(input('Segundo valor: '))
+c = int(input('Terceiro valor: '))
+#Verificando quem é o menor
+menor = a
+if b < a and b < c:
+    menor = b
+if c < a and c < b:
+    menor = c
 
-#Dúvida...
-print('Vou dizer qual número é o maior')
-num1 = float(input('Digite o primeiro número: '))
-num2 = float(input('Digite o segundo: '))
-num3 = float(input('Digite o terceiro: '))
-if num1 > num2 > num3:
-    print('O {} é o maior.'.format(num1))
-    print('O {} é o menor.'.format(num3))
-if num2 > num3 > num1:
-    print('O {} é o maior.'.format(num2))
-    print('O {} é o menor.'.format(num1))
-if num3 > num1 > num2:
-    print('O {} é o maior.'.format(num3))
-    print('O {} é o menor.'.format(num2))
+#Verificando quem é o maior
+maior = a
+if b > a and b > c:
+    maior = b
+if c > a and c > b:
+    maior = c
+print('O menor valor digitado foi {}'.format(menor))
+print('O maior valor digitado foi {}'.format(maior))
