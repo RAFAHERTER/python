@@ -7,7 +7,10 @@ num2 = float(input('Digite o segundo: '))
 num3 = float(input('Digite o terceiro: '))
 if num1 > num2 > num3:
     print('O {} é o maior.'.format(num1))
+    print('O {} é o menor.'.format(num3))
 if num2 > num3 > num1:
     print('O {} é o maior.'.format(num2))
+    print('O {} é o menor.'.format(num1))
 if num3 > num1 > num2:
     print('O {} é o maior.'.format(num3))
+    print('O {} é o menor.'.format(num2))
