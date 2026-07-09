@@ -14,7 +14,7 @@ Códigos para style (funcionam melhor, porém existem outros):
 7 (Negative)
 
 Códigos para 'text':
-30 branco
+30 preto
 31 vermelho
 32 verde
 33 amarelo
@@ -25,7 +25,7 @@ Códigos para 'text':
 #caso queira usar mais cores, use uma biblioteca.
 
 Códigos para 'back':
-40 branco
+40 preto
 41 vermelho
 42 verde
 43 amarelo

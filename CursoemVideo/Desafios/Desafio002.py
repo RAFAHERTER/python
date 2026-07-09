@@ -1,3 +1,4 @@
 numero01 = int (input('Primeiro número: '))
 numero02 = int (input('Segundo número: '))
-print('A soma é', numero01 + numero02)
+soma = numero01 + numero02
+print('A soma é {}{}{}'.format('\033[33m',soma, '\033[m'))
