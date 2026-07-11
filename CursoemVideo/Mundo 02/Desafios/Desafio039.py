@@ -52,3 +52,4 @@ VOLTOU NO TEMPO AGORA É??""")
               'além disso será considerado como \033[1;31mDESERTOR\033[m')
     else:
         print('\033[31m-\033[m'*10, '\033[31mERRO!!\033[m','\033[31m-\033[m'*10)
+        
