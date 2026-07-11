@@ -1,17 +1,24 @@
+from datetime import date
+atual = date.today().year
 ano = int(input('Qual ano você nasceu? '))
-idade = 2026 - ano
+idade = atual - ano
 if idade < 18:
     diferenca = 18 - idade
-    print('Você ainda vai se apresentar ao exército.\n'
-          'Resta {} anos para o seu alistamento militar'
-          .format(diferenca))
+    alistamento = 2026 + diferenca
+    print("""Você ainda vai se apresentar ao exército.
+Restam {} anos para o seu alistamento militar
+Seu alistamento militar será em {}"""
+.format(diferenca, alistamento))
 elif idade == 18:
     print('Está na hora de se alistar.')
 
 else:
     diferenca = idade - 18
-    print('Já passou da hora de se alistar.\n'
-          'Se passaram {} anos do alistamento militar'.format(diferenca))
+    alistamento = 2026 - diferenca
+    print("""Já passou da hora de se alistar.
+Se passaram {} anos do alistamento militar
+Seu alistamento militar foi em {}"""
+          .format(diferenca, alistamento))
     resposta = input('Você já se alistou? ').strip().upper()
     if resposta == 'SIM':
         print('\033[34mExcelente!!\033[m')
@@ -28,8 +35,9 @@ else:
             elif tempo == 0:
                 print('UÉ, TU FALOU QUE SERVIU PORRA.')
             elif tempo < 0:
-                print('Ta de sacanagem comigo né? NÃO EXISTE TEMPO NEGATIVO!!\n'
-                      'VOLTOU NO TEMPO AGORA É??')
+                print("""Ta de sacanagem comigo né?
+NÃO EXISTE TEMPO NEGATIVO!!
+VOLTOU NO TEMPO AGORA É??""")
             else:
                 print('\033[1;31mERRO!!\033[m')
         elif serviu == 'NAO' or serviu == 'NÃO':
