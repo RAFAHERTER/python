@@ -24,3 +24,6 @@ elif jogador == 'TESOURA' and escolha == 'Pedra':
     print('Você PERDEUU!! \nEu escolhi Pedra.')
 elif jogador == 'TESOURA' and escolha == 'Papel':
     print('Você VENCEU!! Eu escolhi Papel.')
+
+else:
+    print('\033[31m----------ERRO!!---------\033[m')
