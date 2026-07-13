@@ -1,16 +1,24 @@
-print('Falta pouco para finalizar a sua COMPRA!!')
-compra = float(input('Digite o valor final do carrinho: '))
-pagamento = str(input('Qual a forma de pagamento? ')).strip().lower()
+print('{:=^40}'.format('LOJAS HERTER'))
+preço = float(input('Digite o valor final do carrinho: '))
+print('''FORMAS DE PAGAMENTO
+[ 1 ] à vista dinheiro/cheque
+[ 2 ] à vista cartão
+[ 3 ] 2x no cartão
+[ 4 ] 3x ou mais no cartão''')
+opcao = int(input('Qual é a opção? '))
+if opcao == 1:
+    total = 0.9 * preço
+elif opcao == 2:
+    total = 0.95 * preço
+elif opcao == 3:
+    total = preço
+    parcela = total / 2
+    print('Sua compra será parcelada em 2x de R${:.2f}'.format(parcela))
+elif opcao == 4:
+    total = preço * 1.2
+    totalparc = int(input('Quantas parcelas? '))
+    parcela  = total / totalparc
+    print('Sua compra será parcelada em {}x de R${:.2f} COM JUROS'.format(totalparc, parcela))
 
-if pagamento == 'dinheiro' or pagamento == 'cheque':
-    desconto = compra - (compra * 0.10)
-    print('Sua compra tem um desconto de 10%, devendo pagar um valor de R${:.2f}'.format(desconto))
-elif pagamento == 'debito' or pagamento == 'débito' or  pagamento == 'credito' or pagamento == 'crédito':
-    desconto = compra - (compra * 0.05)
-    print('Sua compra tem um desconto de 5%, devendo um valor de R${:.2f}'.format(desconto))
-elif pagamento == 'parcela 2x':
-    print('O valor a ser pago deverá ser {}, SEM DESCONTO!'.format(compra))
-elif pagamento == 'parcela 3x':
-    juros = compra + (compra * 0.20)
-    print('Será acrescido um juros de 20% do valor.\n'
-          'E deverá ser cobrado {:.2f} da compra.'.format(juros))
+
+print('Sua compra de R${:.2f} vai custar R${:.2f} no final'.format(preço, total))
