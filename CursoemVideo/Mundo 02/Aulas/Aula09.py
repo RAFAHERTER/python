@@ -1,10 +1,9 @@
-"""Nova categoria de estrutura de controle: LAÇOS, REPETIÇÕES OU ITERAÇÃO.
+"""
+ESTRUTURA DE REPETIÇÃO COM VARIÁVEL DE CONTROLE
+Nova categoria de estrutura de controle: LAÇOS, REPETIÇÕES OU ITERAÇÃO.
 Os laços são representados para estruturas de repetições
 fazendo com o programa se repita, evitando várias linhas
 com comandos repetitivos.
-
-
-
 
 """
 
