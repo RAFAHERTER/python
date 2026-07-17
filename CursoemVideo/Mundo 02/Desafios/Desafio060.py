@@ -12,8 +12,8 @@ for c in range(1, 5):
     num = int(input('Digite um valor: '))
     fatorial = factorial(num)
     print('{}! = {}'.format(num, fatorial))
-'''
-from math import factorial
+
+    from math import factorial
 num = 1
 while num != 0:
     num = int(input('Insira um número: '))
@@ -24,3 +24,16 @@ while num != 0:
     if num != 0:
         print('{}! é  {}'.format(num, fatorial))
 print('Fim do programa')
+
+'''
+#Com GB, sem a biblioteca
+num = int(input('Digite um número para \ncalcular o seu fatorial: '))
+c = num
+f = 1
+print('Calculando {}! = '.format(num), end='')
+while c > 0:
+    print('{}'.format(c), end='')
+    print(' X ' if c > 1 else ' = ', end='')
+    f *= c
+    c = c - 1
+print('{}'.format(f))
