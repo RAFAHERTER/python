@@ -1,4 +1,11 @@
-numero = int(input('Digite um número'))
-fibo = 0
-while fibo != numero:
-    print('Fibonacci')
+num = int(input('Quantos termos deseja mostrar: '))
+primeiro = 1
+segundo = 0
+terceiro = 0
+contador = 0
+while contador != num:
+    contador += 1
+    terceiro = segundo + primeiro
+    primeiro = segundo
+    segundo = terceiro
+    print('{} '.format(primeiro), end='')
