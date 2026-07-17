@@ -1,9 +1,9 @@
-num1 = 0
-num2 = 0
+from time import sleep
+num1 = int(input('Insira um número inteiro: '))
+num2 = int(input('Insira outro número inteiro: '))
 escolha = 0
 while escolha != 6:
-    num1 = int(input('Insira um número inteiro: '))
-    num2 = int(input('Insira outro número inteiro: '))
+
     print('''O que você gostaria de fazer com os números?
 [ 1 ] somar
 [ 2 ] multiplicar
@@ -41,6 +41,8 @@ while escolha != 6:
             print('Os números são iguais!')
     if escolha == 5:
         print('Você escolheu trocar os números')
+        num1 = int(input('Insira um número inteiro: '))
+        num2 = int(input('Insira outro número inteiro: '))
     if escolha == 6:
         print('Saindo do programa.')
-
+    sleep(1)
