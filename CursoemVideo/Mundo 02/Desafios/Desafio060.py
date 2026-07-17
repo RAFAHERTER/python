@@ -17,6 +17,10 @@ from math import factorial
 num = 1
 while num != 0:
     num = int(input('Insira um número: '))
+    if num < 0:
+        print('Opção invalida! Tente novamente.')
+        continue #O 'Continue pula o resto do código e o reinicia. O break interrompe e encerra o loop instantaneamente.
     fatorial = factorial(num)
-    print('{}! é  {}'.format(num, fatorial))
+    if num != 0:
+        print('{}! é  {}'.format(num, fatorial))
 print('Fim do programa')
