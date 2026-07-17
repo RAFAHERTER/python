@@ -5,4 +5,5 @@ Exercícios que senti dificuldades:
 53
 55
 56
+59
 '''
