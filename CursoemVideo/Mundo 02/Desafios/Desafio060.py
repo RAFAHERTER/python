@@ -25,7 +25,6 @@ while num != 0:
         print('{}! é  {}'.format(num, fatorial))
 print('Fim do programa')
 
-'''
 #Com GB, sem a biblioteca
 num = int(input('Digite um número para \ncalcular o seu fatorial: '))
 c = num
@@ -37,3 +36,19 @@ while c > 0:
     f *= c
     c = c - 1
 print('{}'.format(f))
+'''
+#Com FOR
+from time import sleep
+fatorial = 1
+num = int(input('Digite um número que deseja calcular o seu fatorial: '))
+print('Calculando {}! = '.format(num), end='')
+c = num
+for contador in range(num, 0, -1):
+    fatorial *= c
+    print(' {} '.format(contador), end='')
+    print(' x ' if c > 1 else ' = ', end='')
+    c -= 1
+print('{}'.format(fatorial))
+print('Encerrando o programa...')
+sleep (1)
+print('Fim do programa')
