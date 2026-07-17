@@ -1,4 +1,4 @@
-#from time import sleep
+from time import sleep
 #num1 = int(input('Insira um número inteiro: '))
 #num2 = int(input('Insira outro número inteiro: '))
 #escolha = 0
@@ -79,5 +79,5 @@ while opcao != 5:
         print('Finalizando...')
     else:
         print('Opção invalida! Tente novamente.')
-
+    sleep(2)
 print('Fim do programa! Volte sempre!')
