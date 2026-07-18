@@ -15,8 +15,8 @@ if mais_termo != 0:
         print('{} '.format(termo), end='')
 else:
     print('Programa finalizado com sucesso!')
-'''
-#Refazendo sozinho
+
+    #Refazendo sozinho (DEU CERTO)
 print('Gerador de PA')
 print('-='*10)
 primeiro = int(input('Primeiro termo: '))
@@ -40,5 +40,24 @@ while  mais_termo > 0:
         print('PAUSA')
     elif mais_termo == 0:
         print('Progressão finalizada com {} termos mostrados'.format(contador))
-
 print('FIM')
+
+'''
+#Fazendo com o GB
+print('Gerador de PA')
+print('-='*10)
+primeiro = int(input('Primeiro termo: '))
+razao = int(input('Razão da PA: '))
+termo = primeiro
+contador = 1
+total = 0
+mais = 10
+while mais != 0:
+    total += mais
+    while contador <= total:
+        print('{} -> '.format(termo), end='')
+        termo += razao
+        contador += 1
+    print('PAUSA')
+    mais = int(input('Quantos termos você quer mostrar a mais? '))
+print('Progressão finalizada com {} termos mostrados'.format(total))
