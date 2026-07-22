@@ -1,26 +1,25 @@
-num = 0
+'''#Refazendo o código, pois estava errado.
+num = int(input('Digite um número: '))
+escolha = input('Deseja continuar? [S/N] ').strip().upper()
+soma = int(0)
 media = 0
-soma = 0
 contador = 0
 maior = 0
 menor = 0
-escolha = ''
-while escolha != 'N':
+if escolha != 'S' and escolha != 'N':
+    print('Opção invalida! Tente novamente.')
+elif escolha == 'S':
+    while escolha == 'S':
+        contador += 1
+        soma += num
+        media = soma / contador
+        num = int(input('Digite um número: '))
+        escolha = input('Deseja continuar? [S/N] ').strip().upper()
+elif escolha == 'N':
     contador += 1
-    num = int(input('Digite um número: '))
-    soma += num
-    media = soma / contador
-    if contador  == 1:
-        maior = num
-        menor = num
-    if num > maior:
-        maior = num
-    if num < menor:
-        menor = num
-    escolha = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
-print('---'*10)
-print('Você inseriu {} valores'.format(contador))
-print('A média de todos os valores é {:.2f}'.format(media))
-print('O maior valor é {}'.format(maior))
-print('O menor valor é {}'.format(menor))
-print('---Fim do PROGRAMA---')
+
+print('A média entre os {} valores é igual a {}'.format(contador, media))
+print('O maior valor é o {}'.format(maior))
+print('O menor valor é o {}'.format(menor))
+'''
+#Com o GB 
