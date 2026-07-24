@@ -1,6 +1,4 @@
-num = 0
-cont = 0
-
+#Com GB LITERALMENTE A MESMA COISA
 while True:
     print('--'*15)
     num = int(input('Quer ver a tabuada de qual valor? '))
