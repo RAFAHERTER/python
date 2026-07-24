@@ -11,7 +11,7 @@ while True:
     if sexo not in 'MmFf': #Validação de entrada
         while True:
             sexo = input('Sexo [M/F]: ').upper().strip()
-            if sexo in 'MmF':
+            if sexo in 'MmFf':
                 break
 
     if idade >= 18:
