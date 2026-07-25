@@ -1,9 +1,9 @@
-print('='*30)
+#DESAFIO CORRETO
+'''print('='*30)
 print('BANCO DO CURSO EM VIDEO')
 print('='*30)
 saque = int(input('Qual valor você quer sacar? R$ '))
 resto = saque
-tot100 = 0
 if saque // 100 >= 1:
     qntt_100 = saque // 100
     print(f'Total de {qntt_100} cédula(s) de R$100.00')
@@ -34,4 +34,28 @@ if resto // 1 >= 1:
     resto = resto % 1
 print('='*30)
 print('Volte sempre ao Banco CEV')
-
+'''
+#COM GB - considere cédulas de 50, 20, 10 e 1 real.
+print('='*30)
+print('{:^30}'.format('BANCO CEV'))
+print('='*30)
+valor = int(input('Que valor você quer sacar? R$ '))
+total = valor #Desse montante ele irá verificar se tem como sacar 50, 20, 10, 1 real
+cedula_atual = 50
+tot_cedula = 0
+while True:
+    if total >= cedula_atual:
+        total -= cedula_atual
+        tot_cedula += 1
+    else:
+        if tot_cedula > 0:
+            print(f'Total de {tot_cedula} de R$ {cedula_atual}')
+        if cedula_atual == 50:
+            cedula_atual = 20
+        elif cedula_atual == 20:
+            cedula_atual = 10
+        elif cedula_atual == 10:
+            cedula_atual = 1
+        tot_cedula = 0
+        if total == 0:
+            break
