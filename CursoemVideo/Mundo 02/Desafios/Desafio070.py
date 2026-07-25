@@ -11,19 +11,19 @@ while True:
     nome_produto = input('Digite o nome do produto: ').strip()
     preco = float(input('Preço do produto: '))
     contador += 1
-    if contador == 1:
+    soma += preco
+    if contador == 1 or preco < preco_menor:
         preco_menor = preco
         produto_barato = nome_produto
-    else:
-        if preco < preco_menor:
-            preco_menor = preco
-            produto_barato = nome_produto
-    soma += preco
+    #else:
+        #if preco < preco_menor:
+            #preco_menor = preco
+            #produto_barato = nome_produto
     continuar = input('Quer continuar? [S/N] ').strip()
     if preco > 1000:
         tot_prod_1000 += 1
-    while continuar not in 'NnSs':
-        continuar = input('Quer continuar? [S/N] ').strip()
+    while continuar not in 'NS':
+        continuar = input('Quer continuar? [S/N] ').strip().upper()[0]
     if continuar in 'Nn':
         break
 print(f'O total da compra foi de R${soma:.2f}')
