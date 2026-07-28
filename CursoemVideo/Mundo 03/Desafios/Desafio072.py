@@ -1,4 +1,4 @@
-insira = int(input('Digite um valor entre 0 e 20: '))
+'''insira = int(input('Digite um valor entre 0 e 20: '))
 extenso = ('Zero', 'Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez', 'Onze', 'Doze', 'Treze',
        'Quatorze', 'Quinze', 'Dezesseis', 'Desessete', 'Dezoito', 'Dezenove', 'Vinte')
 while True:
@@ -8,4 +8,14 @@ while True:
     if 0 <= insira <= 20:
         break
 print(f'Você digitou o número {extenso[insira]}')
-
+'''
+#COM GB
+cont = ('Zero', 'Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez', 'Onze', 'Doze', 'Treze',
+       'Quatorze', 'Quinze', 'Dezesseis', 'Desessete', 'Dezoito', 'Dezenove', 'Vinte')
+while True:
+    num = int(input('Digite um valor entre 0 e 20: '))
+    if 0 <= num <= 20:
+        break
+    else:
+        print('Tente novamente.', end=' ')
+print(f'Você digitou o número {cont[num]}')
