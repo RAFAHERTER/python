@@ -1,4 +1,4 @@
-num1 = int(input('Digite o 1° valor: '))
+'''num1 = int(input('Digite o 1° valor: '))
 num2 = int(input('Digite o 2° valor: '))
 num3 = int(input('Digite o 3° valor: '))
 num4 = int(input('Digite o 4° valor: '))
@@ -21,3 +21,21 @@ for c in tupla:
         print(c, end=' ')
 if cont_pares == 0:
     print('Nenhum valor par encontrado')
+'''
+#COM GB
+num = (int(input('Digite um número: ')),
+       int(input('Digite outro número: ')),
+       int(input('Digite mais número: ')),
+       int(input('Digite o último número: ')),
+       ) #ISSO TAMBÉM É UMA TUPLA
+print(f'Você digitou os valores {num}')
+print(f'O valor 9 apareceu {num.count(9)} vezes') #Letra A
+if 3 in num:
+    print(f'O valor 3 apareceu na {num.index(3) + 1}° posição')  # Letra B
+else:
+    print('O valor 3 não foi digitado em nenhuma posição.')
+print('Os valores pares digitados foram ', end='')
+for n in num:
+    if n % 2 == 0:
+        print(n, end=' ') #Letra C
+
