@@ -34,9 +34,9 @@ print(f'Foram cadastradas {qtt_pessoas} pessoas.')
 print(f'O maior peso foi de {maior}. Peso de ', end=' ') # maior peso
 for p in lista:
     if p[1] == maior:
-        print([p[0]], end=' ')
+        print(p[0], end=' ')
 print(f'\nO menor peso foi de {menor}. Peso de ', end=' ') # menor peso
 for p in lista:
     if p[1] == menor:
-        print([p[0]], end=' ')
+        print(p[0], end=' ')
 
