@@ -1,10 +1,17 @@
+'''
+Crie um programa que leia nome e duas notas de vários
+alunos e guarde tudo numa lista composta. No final
+mostre um boletim contendo a média de cada um e
+permita que o usuário possa mostrar notas de cada aluno
+individualmente.
+'''
 lista = []
 dados = []
 while True:
     dados.append(input('Nome: '))
     notas = list()
-    nota1 = int(input('Nota 1: '))
-    nota2 = int(input('Nota 2: '))
+    nota1 = float(input('Nota 1: '))
+    nota2 = float(input('Nota 2: '))
     media = (nota1 + nota2)/2
     notas.append(nota1)
     notas.append(nota2)
@@ -26,8 +33,8 @@ numerico = 0
 for c in lista:
     print(numerico, end='    ')
     numerico += 1
-    print(f'{c[0]} ', end='')
-    print(f'{c[2]:>20} ', end='')
+    print(f'{c[0]:<20} ', end='')
+    print(f'{c[2]} ', end='')
     print()
 print('-'*30)
 while True:
