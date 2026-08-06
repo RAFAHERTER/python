@@ -95,7 +95,8 @@ brasil.append(estado1)
 brasil.append(estado2)
 print(brasil[0]['Uf'])
 
-"""
+#
+
 estado = dict()
 brasil = list()
 for c in range(0, 3):
@@ -108,3 +109,7 @@ for e in brasil:
         print(v, end=' ')
     print()
 
+"""
+dicionario = {'jogador 1' : 4, 'jogador 2': 6, 'jogador 3':2}
+resultado = sorted(dicionario.items(), key = lambda item: item[1])
+print(resultado)
