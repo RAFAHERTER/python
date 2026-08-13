@@ -5,7 +5,9 @@ e duas funções chamadas 'sorteie()' e 'somaPar()'. A primeira
 função vai sortear 5 números e vai colocá-los dentro da lista.
 E a segunda função vai mostrar a soma entre todos os valores
 pares sorteados pela função anterior.
-'''
+
+#SOZINHO
+
 from random import randint
 from time import sleep
 
@@ -30,4 +32,28 @@ def soma_Par(lista):
 aleatorio = list()
 sorteie(aleatorio)
 soma_Par(aleatorio)
+'''
+#COM GB
+from random import randint
+from time import sleep
+
+def sorteia(lista):
+    print('Sorteando 5 valores da lista: ', end='')
+    for cont in range(0, 5):
+        n = randint(0, 10)
+        lista.append(n)
+        print(f'{n}', end=' ')
+        sleep(0.3)
+
+def somaPar(lista):
+    soma = 0
+    for valor in lista:
+        if valor % 2 == 0:
+            soma += valor
+    print(f'\nSomando os valores pares de {lista}, temos {soma} ', end=' ')
+#Programa principal
+numeros = list()
+sorteia(numeros)
+somaPar(numeros)
+
 
