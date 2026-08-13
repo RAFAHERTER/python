@@ -12,7 +12,7 @@ b) De 10 até 0, de 2 em 2.
 
 c) Uma contagem personalizada.
 
-'''
+#SOZINHO
 from time import sleep
 def contador(i, f, p):
     if p == 0:
@@ -43,5 +43,40 @@ print('Agora é a sua vez de personalizar a contagem!')
 contador(int(input('Início: ')),
          int(input('Fim: ')),
          int(input('Passo: ')))
+'''
+#COM GB
+from time import sleep
 
+def contador(i, f, p):
+    if p < 0:
+        p *= -1
+    if p == 0:
+        p = 1
+    print('-=' * 20)
+    print(f'Contagem de {i} até {f} de {p} em {p}')
+    sleep(2)
 
+    if i < f:
+        cont = i
+        while cont <= f:
+            print(f'{cont} ', end=' ')
+            sleep(0.5)
+            cont += p
+        print('FIM!')
+    else:
+        cont = i
+        while cont >= f:
+            print(f'{cont} ', end=' ')
+            sleep(0.5)
+            cont -= p
+        print('FIM!')
+
+#Programa Principal
+contador(1, 10, 1)
+contador(10, 0, 2)
+print('-='*20)
+print('Agora é sua vez de personalizar a contagem!')
+ini = int(input('Início: '))
+fim = int(input('Fim: '))
+passo = int(input('Passo: '))
+contador(ini, fim, passo)
