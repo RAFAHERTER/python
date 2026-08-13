@@ -32,13 +32,14 @@ def contador(i, f, p):
             sleep(0.4)
     else:
         print('Sequência IMPOSSÍVEL, pois o INÍCIO é igual ao FIM')
-
     print('FIM!')
+    print('-=' * 30)
     sleep(0.8)
 
 
 contador(1, 10, 1)
 contador(10, 0, 2)
+print('Agora é a sua vez de personalizar a contagem!')
 contador(int(input('Início: ')),
          int(input('Fim: ')),
          int(input('Passo: ')))
