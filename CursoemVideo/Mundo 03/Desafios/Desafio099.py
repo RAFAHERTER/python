@@ -27,6 +27,7 @@ maior(0)
 #COM GB
 from time import sleep
 def maior(*num):
+    print('-=' * 30)
     contador = maior = 0
     print('\nAnalisando os valores passados...')
     for valor in num:
@@ -42,7 +43,7 @@ def maior(*num):
     print(f'O maior valor informado foi {maior}')
 #Programa Principal
 maior(2,9,4,5,7,1)
-#maior(4,7,0)
-#maior(1, 2)
-#maior(6)
-#maior()
+maior(4,7,0)
+maior(1, 2)
+maior(6)
+maior()
