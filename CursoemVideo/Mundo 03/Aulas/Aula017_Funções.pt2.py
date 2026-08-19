@@ -96,5 +96,90 @@ somar(3,2, 5)
 somar(8, 4)
 somar()
 #
+
+#ESCOPO DE VARIÁVEIS
+
+Escopos de declarações
+
+"Basicamente na programação, escopo é o local onde uma variável
+vai existir e o local onde a variável não vai mais existir."
+
+#
+
+def teste():
+    Caso eu faça, por exemplo
+    n = 6 Ele irá criar uma nova variável 'n' com um valor diferente
+    Porém, a variável do programa principal não será alterada.
+    x = 8 A variável 'x' Só irá funcionar dentro da função
+    isso é chamado de escopo local
+    print(f'Na função teste, n vale {n}')
+    Por outro lado, a variável 'n' vai funcionar para todo o programa
+    Dependendo, obviamente do local de onde está criando a função.
+    print(f'Na função teste, x vale {x}')
+
+
+
+#Programa principal
+n = 2 Quando eu tenho uma variável no programa principal
+Ela é chamada de variável global
+print(f'No programa principal, n vale {n}')
+teste()
+
+#
+
+def teste(b):
+    global a #Quando eu faço isso, estou dizendo para usar estritamente a variável 'a' no programa principal
+    a = 8 #E assim o 'a' do programa principal irá ser alterado também.
+    b += 4
+    c = 2
+    print(f'A dentro vale {a}')
+    print(f'B dentro vale {b}')
+    print(f'C dentro vale {c}')
+
+#Programa Principal
+a = 5
+teste(a)
+print(f'A fora vale {a}')
+
+#
+
+#Retorno de VALORES
+#Usa-se o comando return
+def somar(a=0, b=0, c = 0):
+    s = a + b + c
+    return s #Funções que irão retornar resultados, são muito
+        #Úteis quando eu quero ter personalização dos resultados
+        #E também poder mexer nas variáveis dentro do programa principal
+r1 = somar(3,2,5)
+r2 = somar(2, 2)
+r3 = somar(6)
+
+print(f'Os resultados foram {r1}, {r2}, {r3}')
+
+#Pratica
+
+def fatorial(num = 1):
+    f = 1
+    for c in range(num, 0, -1):
+        f *= c
+    return f #funciona para valores booleanos
+
+f1 = fatorial(5)
+f2 = fatorial(4)
+f3 = fatorial()
+print(f'Os resultados são {f1}, {f2}, {f3}')
+
 '''
+def par(n = 0):
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+num = int(input('Digite um número: '))
+if par(num): #Sub entende-se que, caso o valor retornado de 'par(num)' seja True
+    print('É par')
+#print(par(num))
+else:
+    print('Não é par')
+
 
