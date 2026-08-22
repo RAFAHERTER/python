@@ -32,6 +32,7 @@ g = str(input('Quantidade de gols: '))
 if g.isnumeric():
     g = int(g)
 else:
+    g = 0
 if n.strip() == '':
     ficha(gol=g)
 else:
