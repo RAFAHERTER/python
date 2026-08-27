@@ -1,9 +1,9 @@
 lista = list()
 num =  maior = menor = soma = 0
 for c in range(0, 5):
-    num = input('Digite um número: ')
-    lista.append(num)
+    num = int(input('Digite um número: '))
     soma += num
+    lista.append(num)
     if c == 0:
         maior = menor = num
     else:
