@@ -36,4 +36,3 @@ for c in range(0, 101):
     eh_primo(c)
 print(lista)
 
-
