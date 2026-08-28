@@ -5,22 +5,26 @@ a média de cada um e mostre quem está aprovado (média >= 6) e quem está
 reprovado.
 
 '''
-alunos = {   }
-notas = {    }
+alunos = dict()
+notas = dict()
 lista = list()
-soma = media = 0
+media = 0
 while True:
     nome = str(input('Nome: '))
-
     for c in range(0, 3):
         n = float(input(f'Nota {c + 1}: '))
         lista.append(n)
-        soma += n
         notas[f'Nota {c + 1}'] = n
+
     media = sum(lista) / len(lista)
-    alunos[nome] = notas
-    alunos['Média'] = media
-    
+    notas['Média'] = media
+    soma = 0
+    lista.clear()
+    if 6 <= notas['Média'] <= 10:
+        notas['Situação'] = 'Aprovado'
+    elif 0 <= notas['Média'] < 6:
+        notas['Situação'] = 'Reprovado'
+    alunos[nome] = notas.copy()
     escolha = input('Quer continuar? [S / N]: ').strip().upper()
     while True:
         if escolha not in 'SN':
@@ -30,5 +34,6 @@ while True:
             break
     if escolha in 'N':
         break
+
 
 print(alunos)
