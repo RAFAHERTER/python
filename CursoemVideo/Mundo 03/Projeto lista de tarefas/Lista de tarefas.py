@@ -18,13 +18,13 @@ def tarefas(msg):
     print('-'*tamanho)
 
 def leiaint(msg):
-    msg = str(msg)
     while True:
-        if msg.isnumeric():
+        valor = input(msg)
+        if valor.isnumeric():
             break
         else:
             print('ERRO!! Digite apenas números inteiros: ')
-    return int(msg)
+    return int(valor)
 
 
 
@@ -65,11 +65,11 @@ def task(num):
         sleep(1)
         tarefas('TAREFAS PENDENTES?')
         listar_tarefas()
-        concluido = leiaint(input('Qual tarefa foi realizada? [APENAS NÚMEROS] ')) - 1
+        concluido = leiaint('Qual tarefa foi realizada? [APENAS NÚMEROS] ') - 1
         while concluido >= len(afazeres):
             print('ERRO!! Número incompatível com a quantidade de TAREFAS')
             print('POR FAVOR TENTE NOVAMENTE!!')
-            concluido = leiaint(input('Qual tarefa foi realizada? [APENAS NÚMEROS] ')) - 1
+            concluido = leiaint('Qual tarefa foi realizada? [APENAS NÚMEROS] ') - 1
         afazeres[concluido]['Situação'] = 'Concluído'
         print('Tarefa marcada como "CONCLUÍDA"')
         sleep(0.6)
@@ -78,7 +78,7 @@ def task(num):
         tarefas('REMOVENDO TAREFAS')
         listar_tarefas()
         print('-'*70)
-        escolha = leiaint(input('Qual tarefa deseja remover? [Apenas números] '))
+        escolha = leiaint('Qual tarefa deseja remover? [Apenas números] ')
         del afazeres[escolha - 1]
         print('REMOVENDO TAREFA')
         sleep(1)
@@ -90,7 +90,7 @@ sleep(1)
 resposta = 0
 while True:
     menu()
-    resposta = leiaint(input('Sua escolha: '))
+    resposta = leiaint('Sua escolha: ')
     if resposta == 6:
         sleep(0.5)
         tarefas('FINALIZANDO O PROGRAMA')
