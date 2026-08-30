@@ -19,11 +19,13 @@ def tarefas(msg):
 
 def leiaint(msg):
     msg = str(msg)
-    if msg.isnumeric():
-        return int(msg)
-    else:
-        while True:
+    while True:
+        if msg.isnumeric():
+            break
+        else:
             print('ERRO!! Digite apenas números inteiros: ')
+    return int(msg)
+
 
 
 def menu():
@@ -88,7 +90,7 @@ sleep(1)
 resposta = 0
 while True:
     menu()
-    resposta = int(input('Sua escolha: '))
+    resposta = leiaint(input('Sua escolha: '))
     if resposta == 6:
         sleep(0.5)
         tarefas('FINALIZANDO O PROGRAMA')
