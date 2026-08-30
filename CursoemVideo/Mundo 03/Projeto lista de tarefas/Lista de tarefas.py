@@ -34,8 +34,7 @@ def menu():
     [ 2 ] - Listar tarefa
     [ 3 ] - Marcar tarefa como concluída
     [ 4 ] - Remover tarefa
-    [ 5 ] - Ver estatísticas
-    [ 6 ] - Sair  """)
+    [ 5 ] - Sair  """)
     print('-'*70)
 
 def listar_tarefas():
@@ -91,7 +90,8 @@ resposta = 0
 while True:
     menu()
     resposta = leiaint('Sua escolha: ')
-    if resposta == 6:
+
+    if resposta == 5:
         sleep(0.5)
         tarefas('FINALIZANDO O PROGRAMA')
         sleep(1)
