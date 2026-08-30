@@ -69,7 +69,7 @@ def task(num):
         while concluido >= len(afazeres):
             print('ERRO!! Número incompatível com a quantidade de TAREFAS')
             print('POR FAVOR TENTE NOVAMENTE!!')
-            concluido = leiaint(input('Qual tarefa foi realizada? [APENAS NÚMEROS] '))
+            concluido = leiaint(input('Qual tarefa foi realizada? [APENAS NÚMEROS] ')) - 1
         afazeres[concluido]['Situação'] = 'Concluído'
         print('Tarefa marcada como "CONCLUÍDA"')
         sleep(0.6)
