@@ -82,13 +82,13 @@ def task(num):
         tarefas('REMOVENDO TAREFAS')
         lista_ordenada = listar_tarefas()
         print('-'*70)
-        escolha = leiaint('Qual tarefa deseja remover? [Apenas números] ')
+        escolha = leiaint('Qual tarefa deseja remover? [Apenas números] ') - 1
         while escolha >= len(lista_ordenada):
             print('ERRO!! Número incompatível com a quantidade de TAREFAS')
             print('POR FAVOR, TENTE NOVAMENTE!!')
             escolha = leiaint('Qual tarefa deseja remover? [APENAS NÚMEROS] ') - 1
 
-        tarefa_escolhida = lista_ordenada[escolha - 1]
+        tarefa_escolhida = lista_ordenada[escolha]
         afazeres.remove(tarefa_escolhida)
         print('REMOVENDO TAREFA')
         sleep(1)
