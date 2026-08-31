@@ -9,13 +9,14 @@ Projeto Todo Lista.
 loop com menu até escolher "sair".
 '''
 from time import sleep
-afazeres = list()
+
 
 def tarefas(msg):
     tamanho = len(msg) + 8
     print('-'*tamanho)
     print(f'{msg.center(tamanho)} ')
     print('-'*tamanho)
+
 
 def leiaint(msg):
     while True:
@@ -27,7 +28,6 @@ def leiaint(msg):
     return int(valor)
 
 
-
 def menu():
     print('-'*70)
     print("""    [ 1 ] - Adicionar tarefa
@@ -37,15 +37,19 @@ def menu():
     [ 5 ] - Sair  """)
     print('-'*70)
 
+
 def listar_tarefas():
     sleep(1)
     if len(afazeres) == 0:
         print('LISTA VAZIA. POR FAVOR COLOCAR UMA TAREFA!')
+        return afazeres
     else:
-        for pos, c in enumerate(afazeres):
+        afazeres_ordenados = sorted(afazeres, key = lambda p: peso_prioridade[p['Prioridade']])
+        for pos, c in enumerate(afazeres_ordenados):
             print(f'{pos + 1}° TAREFA : ', end='')
             print(f'{c['Descrição']} - Prioridade {c['Prioridade']} - Situação {c['Situação']}')
             print()
+        return afazeres_ordenados
 
 def task(num):
     global afazeres
@@ -63,34 +67,44 @@ def task(num):
     if num == 3:
         sleep(1)
         tarefas('TAREFAS PENDENTES?')
-        listar_tarefas()
+        lista_ordenada = listar_tarefas()
         concluido = leiaint('Qual tarefa foi realizada? [APENAS NÚMEROS] ') - 1
-        while concluido >= len(afazeres):
+        while concluido >= len(lista_ordenada):
             print('ERRO!! Número incompatível com a quantidade de TAREFAS')
-            print('POR FAVOR TENTE NOVAMENTE!!')
+            print('POR FAVOR, TENTE NOVAMENTE!!')
             concluido = leiaint('Qual tarefa foi realizada? [APENAS NÚMEROS] ') - 1
-        afazeres[concluido]['Situação'] = 'Concluído'
+        lista_ordenada[concluido]['Situação'] = 'Concluído'
         print('Tarefa marcada como "CONCLUÍDA"')
         sleep(0.6)
+        return lista_ordenada
 
     if num == 4:
         tarefas('REMOVENDO TAREFAS')
-        listar_tarefas()
+        lista_ordenada = listar_tarefas()
         print('-'*70)
         escolha = leiaint('Qual tarefa deseja remover? [Apenas números] ')
-        del afazeres[escolha - 1]
+        while escolha >= len(lista_ordenada):
+            print('ERRO!! Número incompatível com a quantidade de TAREFAS')
+            print('POR FAVOR, TENTE NOVAMENTE!!')
+            escolha = leiaint('Qual tarefa deseja remover? [APENAS NÚMEROS] ') - 1
+
+        tarefa_escolhida = lista_ordenada[escolha - 1]
+        afazeres.remove(tarefa_escolhida)
         print('REMOVENDO TAREFA')
         sleep(1)
         tarefas('TAREFA REMOVIDA COM SUCESSO')
-    return afazeres
+        return lista_ordenada
 
+#Programa Principal
+afazeres = list()
+peso_prioridade = {'alta' : 1, 'média' : 2, 'baixa': 3}
 tarefas('LISTA DE TAREFAS')
 sleep(1)
 resposta = 0
 while True:
     menu()
     resposta = leiaint('Sua escolha: ')
-
+    sleep(0.6)
     if resposta == 5:
         sleep(0.5)
         tarefas('FINALIZANDO O PROGRAMA')
