@@ -47,3 +47,22 @@ def diminuir(valor, percentual, formatar=False):
     if formatar:
         return f"R$ {valor - (valor * percentual/100):.2f}"
     return valor - (valor * percentual/100)
+
+def resumo(valor, aumento, reducao):
+    """
+    Exibe um resumo das operações realizadas sobre o valor fornecido.
+    
+    :param valor: O valor original.
+    :param aumento: O percentual de aumento.
+    :param reducao: O percentual de redução.
+    """
+    print("-" * 30)
+    print("RESUMO DO VALOR".center(30))
+    print("-" * 30)
+    print(f"Preço analisado: \tR$ {valor:.2f}")
+    print(f"Dobro do preço: \t{moeda_dobro(valor, True)}")
+    print(f"Metade do preço: \t{moeda_metade(valor, True)}")
+    print(f"{aumento}% de aumento: \t{aumentar(valor, aumento, True)}")
+    print(f"{reducao}% de redução: \t{diminuir(valor, reducao, True)}")
+    print("-" * 30)
+    
