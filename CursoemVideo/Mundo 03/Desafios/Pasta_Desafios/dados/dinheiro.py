@@ -1,6 +1,6 @@
 def leiaDinheiro(msg):
     while True:
-        valor = input(msg).strip()
+        valor = input(msg).strip().replace(',', '.')
         if valor.isalpha() or valor == '':
             print(f'\033[0;31mERRO: "{valor}" é um valor inválido!\033[m')
         else:
