@@ -1,1 +1,1 @@
-from .dinheiro import leiaDinheiro
+from .dinheiro import leiaDinheiro, leiaFloat
