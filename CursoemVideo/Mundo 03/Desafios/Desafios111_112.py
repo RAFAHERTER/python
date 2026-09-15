@@ -1,5 +1,4 @@
-from Pasta_Desafios import moeda
-from Pasta_Desafios import dados
+from Pasta_Desafios import moeda, dados
 
 v = dados.leiaDinheiro("Digite o valor: R$ ")
 a = dados.leiaFloat('Digite o percentual de aumento: ') 

@@ -1,3 +1,3 @@
-from .moeda import moeda_dobro, moeda_metade, aumentar, diminuir, resumo
-from .dados import leiaDinheiro, leiaFloat
+from .moeda import moeda
+from .dados import dinheiro
 
