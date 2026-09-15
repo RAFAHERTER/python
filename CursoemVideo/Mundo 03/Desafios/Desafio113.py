@@ -7,23 +7,34 @@ Aproveite e crie também uma função leiaFloat() com a mesma funcionalidade.
 
 '''
 def leiaInt(msg):
-    valor = input(msg).strip()
     while True:
         try:
-            return int(valor)
-            
-        
+            valor = input(msg).strip()
+        except KeyboardInterrupt:
+            print('O usuário preferiu não digitar esse número')
+            return 0
         except:
             print('\033[0;31mERRO! Digite um número inteiro válido.\033[m')
             valor = input(msg).strip()
+        
+        return int(valor)
+       
 
 
 def leiaFloat(msg):
-    valor = input(msg).replace(',', '.').strip()
+    try:
+        valor = input(msg).replace(',', '.').strip()
+    except KeyboardInterrupt:
+        print('O usuário preferiu não digitar esse número')
+        return 0
+
     while True:
         try:
             return float(valor)
             
+        except KeyboardInterrupt:
+            print('O usuário preferiu não digitar esse número')
+            return 0
         except:
             print('\033[0;31mERRO! Digite um número real válido.\033[m')
             valor = input(msg).replace(',', '.').strip()
