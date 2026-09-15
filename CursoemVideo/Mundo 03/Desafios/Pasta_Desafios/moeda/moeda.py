@@ -48,7 +48,7 @@ def diminuir(valor, percentual, formatar=False):
         return f"R$ {valor - (valor * percentual/100):.2f}"
     return valor - (valor * percentual/100)
 
-def resumo(valor, aumento, reducao):
+def resumo(valor = 0, aumento = 10, reducao = 5):
     """
     Exibe um resumo das operações realizadas sobre o valor fornecido.
     
@@ -65,4 +65,5 @@ def resumo(valor, aumento, reducao):
     print(f"{aumento}% de aumento: \t{aumentar(valor, aumento, True)}")
     print(f"{reducao}% de redução: \t{diminuir(valor, reducao, True)}")
     print("-" * 30)
+
     
