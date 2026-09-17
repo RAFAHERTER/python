@@ -1,4 +1,7 @@
-import number
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from number.numeros import leiaInt
 def opcoes():
     print('-'*50)
     print('MENU PRINCIPAL'.center(50))
@@ -9,3 +12,5 @@ def opcoes():
     """)
     print('='*50)
     escolha = leiaInt('Sua opção: ')
+    return escolha
+
