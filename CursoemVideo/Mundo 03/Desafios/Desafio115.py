@@ -26,7 +26,7 @@ from Desafio115.menu import sistema
 #A função os.path.join junta um nome de arquivo 
 
 import os
-from Desafio115.menu import sistema
+from Desafio_final.menu import sistema
 
 caminho_pasta = os.path.dirname(__file__)
 caminho_arquivo = os.path.join(caminho_pasta, "texto.txt")

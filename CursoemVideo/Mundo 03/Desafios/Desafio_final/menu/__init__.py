@@ -1,1 +1,1 @@
-from sistema import opcoes
+from .sistema import opcoes
