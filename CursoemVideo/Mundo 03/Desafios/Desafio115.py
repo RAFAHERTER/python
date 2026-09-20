@@ -26,14 +26,18 @@ from Desafio115.menu import sistema
 #A função os.path.join junta um nome de arquivo 
 
 import os
+from Desafio115.menu import sistema
 
 caminho_pasta = os.path.dirname(__file__)
 caminho_arquivo = os.path.join(caminho_pasta, "texto.txt")
+
+
 with open(caminho_arquivo, "w", encoding= "utf=8") as arquivo:
     conteudo = arquivo.write("Olá mundo!!") #O write retorna o conteudo como números, nesse caso retorna o números de caracteres que foi bem sucedido ao tentar colocar no arquivo
 with open(caminho_arquivo, "r", encoding="utf-8") as arquivo:
     leitura = arquivo.read()
     print(leitura)
+
 
 
 '''while True:
