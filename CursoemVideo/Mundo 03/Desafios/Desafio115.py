@@ -24,32 +24,45 @@ from Desafio115.menu import sistema
 #A biblioteca "os" usará sua função para mudar o caminho retirando apenas o arquivo final. Restando apenas o local da mesma pasta.
 
 #A função os.path.join junta um nome de arquivo 
-
+from time import sleep
 import os
 from Desafio_final.menu import sistema
+from Desafio_final.number import numeros
 
 caminho_pasta = os.path.dirname(__file__)
 caminho_arquivo = os.path.join(caminho_pasta, "texto.txt")
 
 
-with open(caminho_arquivo, "w", encoding= "utf=8") as arquivo:
-    conteudo = arquivo.write("Olá mundo!!") #O write retorna o conteudo como números, nesse caso retorna o números de caracteres que foi bem sucedido ao tentar colocar no arquivo
-with open(caminho_arquivo, "r", encoding="utf-8") as arquivo:
-    leitura = arquivo.read()
-    print(leitura)
+ #O write retorna o conteudo como números, nesse caso retorna o números de caracteres que foi bem sucedido ao tentar colocar no arquivo
 
 
 
-'''while True:
+
+while True:
+    sleep(1)
+    sistema.painel('MENU PRINCIPAL')
     escolha = sistema.opcoes()
     if escolha < 1 or escolha > 3:
         print('Escolha inválida!! Escolha novamente somente números entre 1 e 3')
-    else:
-        #if escolha == 1:
 
-        #if escolha == 2:
+    else:
+        if escolha == 1:
+            sistema.painel('PESSOAS CADASTRADAS')
+            with open(caminho_arquivo, 'r', encoding = 'utf-8') as arquivo:
+                leitura = arquivo.read()
+                print(leitura)
+
+        if escolha == 2:
+            sistema.painel('NOVO CADASTRO')
+            with open(caminho_arquivo, 'a', encoding="utf-8") as arquivo:
+                nome = numeros.leiaString("Nome Completo: ")
+                name = ''
+                for c in nome:
+                    name += f'{c} ' 
+                idade = numeros.leiaInt("Idade:")
+                conteudo = arquivo.write(f'{name} \t\t {idade} anos\n')
+
             
         if escolha == 3:
             print(f'Saindo do programa!!')
             break
-'''

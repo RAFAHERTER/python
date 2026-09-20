@@ -17,4 +17,23 @@ def leiaInt(msg):
             except KeyboardInterrupt:
                 print('O usuário preferiu não digitar um número.')
                 return 0
-            
+
+def leiaString(msg):
+    while True:
+        try:
+            nome = input(msg).strip().title()
+            nome_lista = nome.split()
+            nome_acesso = nome.replace(' ', '')
+        except KeyboardInterrupt:
+            print('O usuário preferiu não digitar o nome!')
+            break
+
+        if nome_acesso.isalpha():
+            return nome_lista
+        else:
+            print(f'"{nome}" não é um nome válido! Tente novamente!')
+
+
+   
+
+
