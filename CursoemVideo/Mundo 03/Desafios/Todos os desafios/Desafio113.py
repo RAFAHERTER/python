@@ -5,7 +5,7 @@ Reescreva a função leiaInt() que fizemos no desafio 104, incluindo agora a
 possibilidade da digitação de um número tipo inválido.
 Aproveite e crie também uma função leiaFloat() com a mesma funcionalidade.
 
-'''
+#Sozinho
 def leiaInt(msg):
     try:
         valor = input(msg).strip()
@@ -59,3 +59,37 @@ num1 = leiaInt('Digite um número inteiro: ')
 num2 = leiaFloat('Digite um número real: ')
 print(f'Você acabou de digitar o número {num1}')
 print(f'Você acabou de digitar o número {num2}')
+
+'''
+#Com GB
+
+def leiaInt(msg):
+    while True:
+        try:
+            valor = int(input(msg))
+        except ValueError , TypeError:
+            print('\033[31mERRO!! Por favor, digite um número inteiro válido\033[m')
+            continue
+        except KeyboardInterrupt:
+            print('\033[31mO usuário preferiu não digitar esse número\033[m')
+            return 0 
+        else:
+            return valor
+
+def leiaFloat(msg):
+    while True:
+        try:
+            valor = float(input(msg))
+        except ValueError, TypeError:
+            print('\033[31mERRO!! Por favor, digite um número inteiro válido\033[m')
+            continue
+        except KeyboardInterrupt:
+            print('\033[31mO usuário preferiu não digitar esse número\033[m')
+            return 0 
+        else:
+            return valor
+
+num = leiaInt('Digite um valor inteiro: ')
+real = leiaFloat('Digite um valor real: ')
+print(f'O valor inteiro digitado foi {num}')
+print(f'O valor real digitado foi {real}')
