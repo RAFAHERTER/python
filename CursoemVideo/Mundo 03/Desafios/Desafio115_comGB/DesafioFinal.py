@@ -21,7 +21,10 @@ while True:
         lerArquivo(caminho_arquivotxt)
 
     elif resposta == 2:
-        cabecalho('Opção 2')
+        cabecalho('NOVO CADASTRO')
+        nome = str(input('Nome: '))
+        idade = leiaInt('Idade: ')
+        cadastrar(caminho_arquivotxt, nome, idade)
 
     elif resposta == 3:
         cabecalho('Saindo do sistema... Até logo!')
