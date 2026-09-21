@@ -1,12 +1,24 @@
 from lib.interface import *
+from lib.arquivo import *
 from time import sleep
+import os
+
+
+arq = "cursoemvideo.txt"
+caminho_atual = os.path.dirname(__file__)
+caminho_arquivotxt = os.path.join(caminho_atual, arq)
+print(caminho_atual)
+
+if not arquivoExiste(caminho_arquivotxt):
+    criarArq(caminho_arquivotxt)
+
 
 while True:
     resposta = menu(['Ver pessoas cadastradas', 
       'Cadastrar novas pessoas', 
       'Sair do programa'] )
     if resposta == 1 :
-        cabecalho('Opção 1')
+        lerArquivo(caminho_arquivotxt)
 
     elif resposta == 2:
         cabecalho('Opção 2')
