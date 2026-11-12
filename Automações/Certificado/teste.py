@@ -1,5 +1,6 @@
-from docx import Document
 import os
+"""from docx import Document
+
 
 caminho_atual = os.path.dirname(__file__)
 caminho_certificado = os.path.join(caminho_atual, "modelo_certificado.docx")
@@ -12,3 +13,7 @@ for p in doc.paragraphs:
         r.text = novo_texto
         print("    run:", novo_texto)
 doc.save(os.path.join(caminho_atual, "teste_saida.docx"))   
+"""
+
+print(os.path.dirname(__file__))
+print(__file__)
