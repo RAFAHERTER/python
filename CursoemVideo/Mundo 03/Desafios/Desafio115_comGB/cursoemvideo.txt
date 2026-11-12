@@ -2,3 +2,4 @@ Jose;35
 Gustavo Guanabara;41
 Rafael Herter;22
 Zuleide Alberta;45
+Lucas de Jesus;45
